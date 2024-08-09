@@ -21,7 +21,9 @@ export default function Header() {
            text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5"
         >
           {links.map((link, index) => (
-            <li
+            <motion.li
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
               key={link.hash}
               className="h-3/4 flex items-center justify-center"
             >
@@ -31,7 +33,7 @@ export default function Header() {
               >
                 {link.name}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </nav>
