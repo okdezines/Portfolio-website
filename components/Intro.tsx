@@ -31,6 +31,7 @@ export default function Intro() {
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
+
           <motion.span
             className="text-4xl absolute bottom-0 right-0"
             initial={{ opacity: 0, scale: 0 }}
@@ -58,7 +59,13 @@ export default function Intro() {
         <span className="italic">- sites & apps</span>. My focus is in Frontend
         <span className="underline"> React, (Next.js) and UI design </span>.
       </motion.h1>
-      <div
+
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 
       text-lg font-medium"
       >
@@ -101,7 +108,7 @@ export default function Intro() {
         >
           <FaGithubSquare />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
