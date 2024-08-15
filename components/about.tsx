@@ -20,12 +20,12 @@ export default function About() {
 				<span className="font-medium"> Creative Technologies</span>, I decided to pursue my passion for web
 				technologies. I enrolled in a coding bootcamp and learned
 				<span className="font-medium"> full-stack web development</span>.
-				<span className="italic"> My niche</span> is in the frontend aspect of development. I{' '}
-				<span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My
-				core stack is
+				<span className="italic"> Originating from a graphic design background, </span> has landed my interest
+				in the frontend aspect of development. I
+				<span className="underline"> love</span> to create solutions that provide a positive outcome especially
+				that must be visually stimulating. My more familiar core stacks are
 				<span className="font-medium"> React.js, Next.js, Node.js, MongoDB, CSS. </span>
-				I am also familiar with TypeScript and Vanilla Js. I am always looking to learn new technologies. I am
-				currently looking for a
+				I am also familiar with TypeScript and Vanilla Js. I am currently looking for a
 				<span className="font-medium"> full-time position</span> as a software developer.
 			</p>
 			<p>
