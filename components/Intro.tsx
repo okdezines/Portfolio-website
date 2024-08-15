@@ -75,7 +75,7 @@ export default function Intro() {
           flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110
            hover:bg-gray-950 active:scale-105 transition"
         >
-          Contact me here{" "}
+          Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
