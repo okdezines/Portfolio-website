@@ -24,7 +24,7 @@ export default function About() {
 				in the frontend aspect of development. I
 				<span className="underline"> love</span> to create solutions that provide a positive outcome especially
 				that must be visually stimulating. My more familiar core stacks are
-				<span className="font-medium"> React.js, Next.js, Node.js, MongoDB, CSS. </span>
+				<span className="font-medium text-[#1e8dd7]"> React.js, Next.js, Node.js, MongoDB, CSS. </span>
 				I am also familiar with TypeScript and Vanilla Js. I am currently looking for a
 				<span className="font-medium"> full-time position</span> as a software developer.
 			</p>
@@ -32,7 +32,7 @@ export default function About() {
 				<span className="italic"> When I'm not coding</span>, I enjoy playing my guitar, video games and
 				watching movies. I also enjoy
 				<span className="font-medium"> learning new things</span>. I am currently learning about
-				<span className="font-medium"> animation</span> and more about UI/UX.
+				<span className="font-medium"> UX/UI design</span>.
 			</p>
 		</motion.section>
 	);

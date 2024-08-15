@@ -10,7 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col items-center sm:w-2/3 lg:w-9/11">
+    <section className="flex flex-col items-center sm:w-2/3 lg:w-8/11">
       <div className="flex items-center justify-center ">
         <div className="relative">
           <motion.div
@@ -54,7 +54,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I'm Gunter. </span> I have experience and training in 
         <span className="font-bold"> Fullstack development.</span> My
-        <span className="italic">- niche</span> and focus is in Frontend development and Design. My core stacks are
+        <span className="italic ">- niche</span> is in the <span className="text-[#1e8dd7]">Frontend web development and Design</span>. My core stacks are
         <span className="underline"> React and (Next.js) </span>.
       </motion.h1>
 
