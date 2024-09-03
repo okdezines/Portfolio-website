@@ -4,5 +4,30 @@
     "emmet.variables": {
         "lang": "javascript",
         "charset": "UTF-8"
-    }
+    },
+    "editor.semanticTokenColorCustomizations": {},
+    "workbench.colorCustomizations": {},
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                },
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                },
+            ]
+        }
+    },
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }

@@ -10,7 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 export default function Intro() {
   return (
-    <section id = "home" className=" flex flex-col items-center sm:w-2/3 lg:w-8/11 scroll-mt-[100rem]">
+    <section id="home" className=" flex flex-col items-center sm:w-2/3 lg:w-8/11 scroll-mt-[100rem]">
       <div className="flex items-center justify-center ">
         <div className="relative">
           <motion.div
@@ -52,7 +52,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Gunter. </span> I have experience and training in 
+        <span className="font-bold">Hello, I'm Gunter. </span> I have experience and training in
         <span className="font-bold"> Fullstack development.</span> My
         <span className="italic ">- niche</span> is in the <span className="text-[#1e8dd7]">Frontend web development and Design</span>. My core stacks are
         <span className="underline"> React and (Next.js) </span>.
@@ -61,7 +61,7 @@ export default function Intro() {
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ 
+        transition={{
           delay: 0.1,
         }}
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 
@@ -69,9 +69,8 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className=" group bg-gray-900 text-white px-7 py-3 
-          flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110
-           hover:bg-gray-950 active:scale-105 transition"
+          className=" group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
+          outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -99,10 +98,9 @@ export default function Intro() {
         <a
           href="https://github.com"
           target="_blank"
-          className="bg-white p-4 text-gray-700
-          flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] 
-          hover:scale-[1.15] hover:text-gray-950 
-          active:scale-[1.15] transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-gray-120
+          flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] 
+          hover:text-gray-950 active:scale-[1.15] transition cursor-pointer border border-black/10"
         >
           <FaGithubSquare />
         </a>

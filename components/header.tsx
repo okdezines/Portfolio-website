@@ -1,16 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
-import { useState } from "react";
-//tailwind class for conditional class
+import { links } from "@/lib/data"
 import clsx from "clsx"
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState("Home");
-  
-  
+  const { activeSection, setActiveSection } = useActiveSectionContext()
+
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -28,7 +26,7 @@ export default function Header() {
         >
           {links.map((link, index) => (
             <motion.li
-            className="h-3/4 flex items-center justify-center relative"
+              className="h-3/4 flex items-center justify-center relative"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               key={link.hash}
@@ -40,19 +38,19 @@ export default function Header() {
                     "text-gray-95": activeSection === link.name,
                   }
                 )}
-                  href={link.hash}
-                  onClick={() => setActiveSection(link.name)}
+                href={link.hash}
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
                 {
                   link.name === activeSection && (
                     <motion.span className="bg-gray-300 rounded-[75%] absolute inset-0 -z-10 h-full "
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
                     >
                     </motion.span>
                   )

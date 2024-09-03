@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-
+import ActiveSectionContextProvider from "@/context/active-section-context";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -31,8 +31,11 @@ export default function RootLayout({
         h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] 
         md:left-[-33rem] lg:lef-[-28rem] xl:left-[-15rm] 2xl:left-[-5rem]"
         ></div>
-        <Header />
-        {children}
+
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
