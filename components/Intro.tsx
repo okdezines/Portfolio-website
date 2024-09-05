@@ -7,25 +7,27 @@ import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useSectionInVew } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInVew("Home", 0.5);
 
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  // const { ref, inView } = useInView({
+  //   threshold: 0.5,type SectionName = typeof links[number]["name"]
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home")
-    }
-  }, [inView, setActiveSection, timeOfLastClick])
+  // const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+
+  // useEffect(() => {
+  //   if (inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection("Home")
+  //   }
+  // }, [inView, setActiveSection, timeOfLastClick])
 
   return (
-    <section ref={ref} id="home" className=" flex flex-col items-center sm:w-2/3 lg:w-8/11 scroll-mt-[100rem]">
+    <section
+      ref={ref}
+      id="home"
+      className=" flex flex-col items-center sm:w-2/3 lg:w-8/11 scroll-mt-[100rem]">
       <div className="flex items-center justify-center ">
         <div className="relative">
           <motion.div
