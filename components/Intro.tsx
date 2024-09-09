@@ -8,9 +8,11 @@ import { HiDownload } from "react-icons/hi";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInVew } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context"
 
 export default function Intro() {
   const { ref } = useSectionInVew("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   // const { ref, inView } = useInView({
   //   threshold: 0.5,type SectionName = typeof links[number]["name"]
@@ -88,6 +90,11 @@ export default function Intro() {
           href="#contact"
           className=" group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
           outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact")
+            setTimeOfLastClick(Date.now())
+          }}
+
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -97,7 +104,7 @@ export default function Intro() {
           download={true}
           className="group bg-white px-7 py-3 
           flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 
-          active:scale-105 transition cursor-pointer border border-black/10"
+          active:scale-105 transition cursor-pointer borderBlack"
         >
           Download CV
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -108,7 +115,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700
           flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15]
           hover:text-gray-950  
-          active:scale-[1.15] transition cursor-pointer border border-black/10"
+          active:scale-[1.15] transition cursor-pointer borderBlack"
         >
           <BsLinkedin />
         </a>
@@ -117,7 +124,7 @@ export default function Intro() {
           target="_blank"
           className="bg-white p-4 text-gray-120
           flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] 
-          hover:text-gray-950 active:scale-[1.15] transition cursor-pointer border border-black/10"
+          hover:text-gray-950 active:scale-[1.15] transition cursor-pointer borderBlack"
         >
           <FaGithubSquare />
         </a>

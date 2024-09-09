@@ -40,7 +40,7 @@ export default function Skills() {
                             once: true,
                         }}
                         custom={index}
-                        className="bg-white border border-black/[0.1] rounded-xl px-5 py-2"
+                        className="bg-white borderBlack rounded-xl px-5 py-2"
                     >
                         {skill}
                     </motion.li>

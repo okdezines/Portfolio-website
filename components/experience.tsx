@@ -9,12 +9,16 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { useSectionInVew } from '@/lib/hooks';
 
 
 export default function Experience() {
+    const { ref } = useSectionInVew('Experience')
     return (
-
-        <section id="experience" className='scroll-mt-28'>
+        <section
+            ref={ref}
+            id="experience"
+            className='scroll-mt-28 mb-28 sm:mb-40'>
             <SectionHeading>My Experience</SectionHeading>
 
             <VerticalTimeline lineColor="">
